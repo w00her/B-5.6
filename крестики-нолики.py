@@ -15,8 +15,7 @@ game_field = ([' ', "0", "1", "2"],
 players = ['x', 'o']
 moves_variants = ['00', '01', '02', '10', '11', '12', '20', '21', '22']
 moves = 0
-Flag = True
-while Flag:
+while True:
     for _ in game_field:
         print(*_)
     if moves == 9:
@@ -34,7 +33,6 @@ while Flag:
                 game_field[1][3] == game_field[2][2] == game_field[3][1] == players[1]
         ):
             print(f'<<{players[1]}>>, Вы победили, игра окончена!')
-            flag = False
             break
 
     move = 'игрок делает ход'
